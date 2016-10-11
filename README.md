@@ -111,7 +111,7 @@ function Chat() {
   this.messageInput.focus();
 
   // Open websocket connection.
-  this.ws = new WebSocket('ws://' + location.host);
+  this.ws = new WebSocket(location.origin.replace(/^http/, 'ws'));
   this.ws.onmessage = this.displayMessage.bind(this);
 }
 
