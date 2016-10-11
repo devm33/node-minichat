@@ -10,13 +10,13 @@ The applications `node` and `npm` will be needed. Install them from here <https:
 
 Then add a `package.json` file to your project by running:
 
-  npm init --yes
-  
+    npm init --yes
+
 Install the neccessary dependencies and add then to the `package.json` by running:
 
-  npm install --save express@4.13
-  npm install --save ejs@2.4
-  npm install --save ws@1.1
+    npm install --save express@4.13
+    npm install --save ejs@2.4
+    npm install --save ws@1.1
 
 - [Express](https://expressjs.com/) is a web framework for Node
 - [EJS](http://www.embeddedjs.com/) is a templating library.
@@ -85,7 +85,7 @@ server.listen(port, function() {
 In a new terminal run:
 
     node index.js
-    
+
 Press `control+c` to stop running the web server locally.
 
 ### 4. Deploy to Heroku
@@ -107,7 +107,7 @@ In order for Heroku to know the app backend is Node.js create a file named `Proc
 Deploy your code:
 
     git push heroku master
-    
+
 Ensure that at least one instance of the app is running:
 
     heroku ps:scale web=1
