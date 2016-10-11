@@ -1,21 +1,14 @@
 var server = require('http').createServer();
 var wss = new require('ws').Server({server: server});
-var app = require('express')();
+var express = require('express');
+var app = express();
 
 var port = process.env.PORT || 8080;
 
 // Serve files from the static directory.
-app.use(express.static(__dirname + '/static'));
+app.use('/', express.static(__dirname + '/static'));
 
-// Render templates using the EJS library.
-app.set('views', __dirname);
-app.set('view engine', 'ejs');
-
-// Render index.ejs for the main page.
-app.get('/', function(request, response) {
-  response.render('index');
-});
-
+// Send and receive chat message with the websocket server
 wss.on('connection', function(ws) {
   // Listen for messages sent from the frontend clients.
   ws.on('message', function(msg) {
