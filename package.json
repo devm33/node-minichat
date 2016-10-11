@@ -1,0 +1,24 @@
+{
+  "name": "node-minichat",
+  "version": "1.0.0",
+  "description": "minimal chat example using nodejs on heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devm33/node-minichat.git"
+  },
+  "keywords": [],
+  "author": "Devraj Mehta (https://devm33.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devm33/node-minichat/issues"
+  },
+  "homepage": "https://github.com/devm33/node-minichat#readme",
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "^4.13.4"
+  }
+}
