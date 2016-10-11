@@ -176,7 +176,7 @@ To create a new Heroku project run:
 
     heroku create
 
-In order for Heroku to know the app backend is Node.js create a file named
+In order for Heroku to know how to run the backend create a file named
 `Procfile` with the contents:
 
     web: node index.js
